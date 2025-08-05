@@ -1,4 +1,4 @@
-import React from "react";
+import { Link } from "react-router-dom";
 import BreadCrum from "../components/BreadCrum";
 
 const ErrorPage = () => {
@@ -19,12 +19,12 @@ const ErrorPage = () => {
                 We’re sorry, the page you have looked for does not exist in our
                 website! Maybe go to our home page or try to use a search?
               </p>
-              <a
+              <Link
                 className="btn btn-primary rounded-pill py-3 px-5"
-                href="index.html"
+                to="/"
               >
                 Go Back To Home
-              </a>
+              </Link>
             </div>
           </div>
         </div>

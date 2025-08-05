@@ -77,8 +77,7 @@ const Navbar = () => {
         <nav className="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
           <a href="" className="navbar-brand p-0">
             <h1 className="text-primary">
-              <i className="fas fa-search-dollar me-3"></i>Stocker
-            </h1>
+              <i className="fas fa-shopping-bag me-3"></i>{import.meta.env.VITE_APP_SITE_NAME}</h1>
             {/* <img src="img/logo.png" alt="Logo"/>  */}
           </a>
           <button
