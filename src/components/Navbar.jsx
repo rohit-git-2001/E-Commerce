@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const Navbar = () => {
   return (
@@ -7,7 +7,7 @@ const Navbar = () => {
       {" "}
       <div className="container-fluid topbar bg-light px-5 d-none d-lg-block">
         <div className="row gx-0 align-items-center">
-          <div className="col-lg-8 text-center text-lg-start mb-2 mb-lg-0">
+          <div className="col-lg-8 col-6 text-center text-lg-start mb-2 mb-lg-0">
             <div className="d-flex flex-wrap">
               <Link
                 to={import.meta.env.VITE_APP_SITE_MAP}
@@ -16,7 +16,7 @@ const Navbar = () => {
                 className="text-muted small me-4"
               >
                 <i className="fas fa-map-marker-alt text-primary me-2"></i>
-                Location
+                <span className="d-none d-xl-inline-block">Location</span>
               </Link>
               <Link
                 to={`tel: ${import.meta.env.VITE_APP_PHONE_NUMBER}`}
@@ -25,7 +25,7 @@ const Navbar = () => {
                 className="text-muted small me-4"
               >
                 <i className="fas fa-phone-alt text-primary me-2"></i>
-                +01234567890
+                <span className="d-none d-xl-inline-block">Phone</span>
               </Link>
               <Link
                 to={`mailto:${import.meta.env.VITE_APP_EMAIL}`}
@@ -34,25 +34,17 @@ const Navbar = () => {
                 className="text-muted small me-0"
               >
                 <i className="fas fa-envelope text-primary me-2"></i>
-                Example@gmail.com
+                <span className="d-none d-xl-inline-block">Email</span>
               </Link>
             </div>
           </div>
-          <div className="col-lg-4 text-center text-lg-end">
-            <div
-              className="d-inline-flex align-items-center"
-              style={{ height: "45px" }}
-            >
-              <a href="#">
-                <small className="me-3 text-dark">
-                  <i className="fa fa-user text-primary me-2"></i>Register
-                </small>
-              </a>
-              <a href="#">
+          <div className="col-lg-4 col-6 text-center text-lg-end">
+            <div className="mt-1 p-2 d-inline-flex align-itmes-center ">
+              {/* <a href="#">
                 <small className="me-3 text-dark">
                   <i className="fa fa-sign-in-alt text-primary me-2"></i>Login
                 </small>
-              </a>
+              </a> */}
               <div className="dropdown">
                 <a
                   href="#"
@@ -88,13 +80,13 @@ const Navbar = () => {
       </div>
       <div className="container-fluid position-relative p-0">
         <nav className="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
-          <a href="" className="navbar-brand p-0">
+          <NavLink to="/" className="navbar-brand p-0">
             <h1 className="text-primary">
               <i className="fas fa-shopping-bag me-3"></i>
               {import.meta.env.VITE_APP_SITE_NAME}
             </h1>
             {/* <img src="img/logo.png" alt="Logo"/>  */}
-          </a>
+          </NavLink>
           <button
             className="navbar-toggler"
             type="button"
@@ -105,46 +97,40 @@ const Navbar = () => {
           </button>
           <div className="collapse navbar-collapse" id="navbarCollapse">
             <div className="navbar-nav ms-auto py-0">
-              <a href="index.html" className="nav-item nav-link active">
+              <NavLink to="/" className="nav-item nav-link ">
                 Home
-              </a>
-              <a href="about.html" className="nav-item nav-link">
+              </NavLink>
+              <NavLink to="/shop" className="nav-item nav-link">
+                Shop
+              </NavLink>
+              <NavLink to="/features" className="nav-item nav-link">
+                Our Features
+              </NavLink>
+              <NavLink to="/about" className="nav-item nav-link">
                 About
-              </a>
-              <a href="service.html" className="nav-item nav-link">
-                Services
-              </a>
-              <a href="blog.html" className="nav-item nav-link">
-                Blogs
-              </a>
-              <div className="nav-item dropdown">
+              </NavLink>
+              <NavLink to="/contactus" className="nav-item nav-link">
+                Contact Us
+              </NavLink>
+              <NavLink to="/Faqs" className="nav-item nav-link">
+                FAQs
+              </NavLink>
+              <NavLink to="/admin" className="nav-item nav-link">
+                Admin
+              </NavLink>
+              {/* <div className="nav-item dropdown">
                 <a href="#" className="nav-link" data-bs-toggle="dropdown">
                   <span className="dropdown-toggle">Pages</span>
                 </a>
                 <div className="dropdown-menu m-0">
-                  <a href="feature.html" className="dropdown-item">
+                  <NavLink to="/features" className="dropdown-item">
                     Our Features
-                  </a>
-                  <a href="team.html" className="dropdown-item">
-                    Our team
-                  </a>
-                  <a href="testimonial.html" className="dropdown-item">
-                    Testimonial
-                  </a>
-                  <a href="offer.html" className="dropdown-item">
-                    Our offer
-                  </a>
-                  <a href="FAQ.html" className="dropdown-item">
+                  </NavLink>
+                  <NavLink to="/Faqs" className="dropdown-item">
                     FAQs
-                  </a>
-                  <a href="404.html" className="dropdown-item">
-                    404 Page
-                  </a>
+                  </NavLink>
                 </div>
-              </div>
-              <a href="contact.html" className="nav-item nav-link">
-                Contact Us
-              </a>
+              </div> */}
             </div>
             <a
               href="#"

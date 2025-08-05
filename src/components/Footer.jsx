@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -19,90 +20,24 @@ const Footer = () => {
               <div className="footer-item">
                 <a href="index.html" className="p-0">
                   <h4 className="text-white">
-                    <i className="fas fa-search-dollar me-3"></i>Stocker
+                    <i className="fas fa-shopping-bag me-3"></i>
+                    {import.meta.env.VITE_APP_SITE_NAME}
                   </h4>
                   {/* <img src="img/logo.png" alt="Logo"/>  */}
                 </a>
-                <p className="mb-4">
-                  Dolor amet sit justo amet elitr clita ipsum elitr est.Lorem
-                  ipsum dolor sit amet, consectetur adipiscing...
-                </p>
-                <div className="d-flex">
-                  <a
-                    href="#"
-                    className="bg-primary d-flex rounded align-items-center py-2 px-3 me-2"
-                  >
-                    <i className="fas fa-apple-alt text-white"></i>
-                    <div className="ms-3">
-                      <small className="text-white">Download on the</small>
-                      <h6 className="text-white">App Store</h6>
-                    </div>
-                  </a>
-                  <a
-                    href="#"
-                    className="bg-dark d-flex rounded align-items-center py-2 px-3 ms-2"
-                  >
-                    <i className="fas fa-play text-primary"></i>
-                    <div className="ms-3">
-                      <small className="text-white">Get it on</small>
-                      <h6 className="text-white">Google Play</h6>
-                    </div>
-                  </a>
-                </div>
               </div>
-            </div>
-            <div className="col-md-6 col-lg-6 col-xl-2">
               <div className="footer-item">
-                <h4 className="text-white mb-4">Quick Links</h4>
-                <a href="#">
-                  <i className="fas fa-angle-right me-2"></i> About Us
-                </a>
-                <a href="#">
-                  <i className="fas fa-angle-right me-2"></i> Feature
-                </a>
-                <a href="#">
-                  <i className="fas fa-angle-right me-2"></i> Attractions
-                </a>
-                <a href="#">
-                  <i className="fas fa-angle-right me-2"></i> Tickets
-                </a>
-                <a href="#">
-                  <i className="fas fa-angle-right me-2"></i> Blog
-                </a>
-                <a href="#">
-                  <i className="fas fa-angle-right me-2"></i> Contact us
-                </a>
-              </div>
-            </div>
-            <div className="col-md-6 col-lg-6 col-xl-3">
-              <div className="footer-item">
-                <h4 className="text-white mb-4">Support</h4>
-                <a href="#">
-                  <i className="fas fa-angle-right me-2"></i> Privacy Policy
-                </a>
-                <a href="#">
-                  <i className="fas fa-angle-right me-2"></i> Terms & Conditions
-                </a>
-                <a href="#">
-                  <i className="fas fa-angle-right me-2"></i> Disclaimer
-                </a>
-                <a href="#">
-                  <i className="fas fa-angle-right me-2"></i> Support
-                </a>
-                <a href="#">
-                  <i className="fas fa-angle-right me-2"></i> FAQ
-                </a>
-                <a href="#">
-                  <i className="fas fa-angle-right me-2"></i> Help
-                </a>
-              </div>
-            </div>
-            <div className="col-md-6 col-lg-6 col-xl-3">
-              <div className="footer-item">
-                <h4 className="text-white mb-4">Contact Info</h4>
+                {/* <h4 className="text-white mb-4">Contact Info</h4> */}
                 <div className="d-flex align-items-center">
                   <i className="fas fa-map-marker-alt text-primary me-3"></i>
-                  <p className="text-white mb-0">123 Street New York.USA</p>
+                  <Link
+                    to={import.meta.env.VITE_APP_SITE_ADDRESS}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="text-white mb-0"
+                  >
+                    Address
+                  </Link>
                 </div>
                 <div className="d-flex align-items-center">
                   <i className="fas fa-envelope text-primary me-3"></i>
@@ -117,31 +52,101 @@ const Footer = () => {
                   <p className="text-white mb-0">Yoursite@ex.com</p>
                 </div>
                 <div className="d-flex">
-                  <a
+                  <Link
                     className="btn btn-primary btn-sm-square rounded-circle me-3"
-                    href="#"
+                    to="#"
                   >
                     <i className="fab fa-facebook-f text-white"></i>
-                  </a>
-                  <a
+                  </Link>
+                  <Link
                     className="btn btn-primary btn-sm-square rounded-circle me-3"
-                    href="#"
+                    to="#"
                   >
                     <i className="fab fa-twitter text-white"></i>
-                  </a>
-                  <a
+                  </Link>
+                  <Link
                     className="btn btn-primary btn-sm-square rounded-circle me-3"
-                    href="#"
+                    to="#"
                   >
                     <i className="fab fa-instagram text-white"></i>
-                  </a>
-                  <a
-                    className="btn btn-primary btn-sm-square rounded-circle me-0"
-                    href="#"
+                  </Link>
+                  <Link
+                    className="btn btn-primary btn-sm-square rounded-circle me-3"
+                    to="#"
                   >
                     <i className="fab fa-linkedin-in text-white"></i>
-                  </a>
+                  </Link>
+                  <Link
+                    className="btn btn-primary btn-sm-square rounded-circle me-0"
+                    to="#"
+                  >
+                    <i className="fab fa-youtube text-white"></i>
+                  </Link>
                 </div>
+              </div>
+            </div>
+            <div className="col-md-6 col-lg-6 col-xl-2">
+              <div className="footer-item">
+                <h4 className="text-white mb-4">Quick Links</h4>
+                <Link className="text-light" to="/about">
+                  <i className="fas fa-angle-right me-2"></i> About Us
+                </Link>
+                <Link className="text-light" to="/features">
+                  <i className="fas fa-angle-right me-2"></i> Feature
+                </Link>
+                <Link className="text-light" href="/shop">
+                  <i className="fas fa-angle-right me-2"></i> Shop
+                </Link>
+                <Link className="text-light" href="/faqs">
+                  <i className="fas fa-angle-right me-2"></i> FAQs
+                </Link>
+                <Link className="text-light" href="/contactus">
+                  <i className="fas fa-angle-right me-2"></i> Contact us
+                </Link>
+              </div>
+            </div>
+            <div className="col-md-6 col-lg-6 col-xl-2">
+              <div className="footer-item">
+                <h4 className="text-white mb-4">Support</h4>
+                <Link className="text-light" to="/" href="#">
+                  <i className="fas fa-angle-right me-2"></i> Privacy Policy
+                </Link>
+                <Link className="text-light" to="/" href="#">
+                  <i className="fas fa-angle-right me-2"></i> Terms & Conditions
+                </Link>
+                <Link className="text-light" to="/" href="#">
+                  <i className="fas fa-angle-right me-2"></i> Disclaimer
+                </Link>
+                <Link className="text-light" to="/" href="#">
+                  <i className="fas fa-angle-right me-2"></i> Support
+                </Link>
+                <Link className="text-light" to="/" href="#">
+                  <i className="fas fa-angle-right me-2"></i> FAQ
+                </Link>
+                <Link className="text-light" to="/" href="#">
+                  <i className="fas fa-angle-right me-2"></i> Help
+                </Link>
+              </div>
+            </div>
+            <div className="col-md-6 col-lg-6 col-xl-4">
+              <div className="footer-item">
+                <h4 className="text-white mb-4">News Letter Subscription</h4>
+                <p className="text-light">
+                  Subscribe our newsletter service to get update on latest
+                  product and best deals
+                </p>
+                <form action="">
+                  <div className="btn-group">
+                    <input
+                      type="email"
+                      name=""
+                      id=""
+                      placeholder="Email Address"
+                      className="form-control rounded-0 rounded-start"
+                    />
+                    <button className="btn btn-primary">Subscriibe</button>
+                  </div>
+                </form>
               </div>
             </div>
           </div>
@@ -151,33 +156,14 @@ const Footer = () => {
       <div className="container-fluid copyright py-4">
         <div className="container">
           <div className="row g-4 align-items-center">
-            <div className="col-md-6 text-center text-md-start mb-md-0">
+            <div className="text-center mb-md-0">
               <span className="text-body">
                 <a href="#" className="border-bottom text-white">
-                  <i className="fas fa-copyright text-light me-2"></i>Your Site
-                  Name
+                  <i className="fas fa-copyright text-light me-2"></i>
+                  {import.meta.env.VITE_APP_SITE_NAME}
                 </a>
                 , All right reserved.
               </span>
-            </div>
-            <div className="col-md-6 text-center text-md-end text-body">
-              {/* This template is free as long as you keep the below author’s credit link/attribution link/backlink. 
-                If you'd like to use the template without the below author’s credit link/attribution link/backlink, 
-                        you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". */}
-              Designed By{" "}
-              <a
-                className="border-bottom text-white"
-                href="https://htmlcodex.com"
-              >
-                HTML Codex
-              </a>{" "}
-              Distributed By{" "}
-              <a
-                className="border-bottom text-white"
-                href="https://themewagon.com"
-              >
-                ThemeWagon
-              </a>
             </div>
           </div>
         </div>
@@ -187,3 +173,4 @@ const Footer = () => {
 };
 
 export default Footer;
+   

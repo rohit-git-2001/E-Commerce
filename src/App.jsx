@@ -8,6 +8,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import FeaturesPage from "./pages/FeaturesPage";
 import ContactusPage from "./pages/ContactusPage";
 import ErrorPage from "./pages/ErrorPage";
+import AdminHomePage from "./pages/Admin/AdminHomePage";
 
 const App = () => {
   return (
@@ -21,6 +22,7 @@ const App = () => {
           <Route path="/features" element={<FeaturesPage />} />
           <Route path="/faqs" element={<FaqsPage />} />
           <Route path="/contactus" element={<ContactusPage />} />
+          <Route path="/admin" element={<AdminHomePage />} />"
           <Route path="/*" element={<ErrorPage />} />"
         </Routes>
         <Footer />
