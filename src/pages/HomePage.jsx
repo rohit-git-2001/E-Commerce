@@ -2,6 +2,13 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import About from "../components/About";
 import { Autoplay } from "swiper/modules";
 import "swiper/css";
+import Products from "../components/Products";
+import Features from "../components/Features";
+import ProductsSlider from "../components/ProductsSlider";
+import "swiper/css/effect-fade";
+import "swiper/css/autoplay";
+import Faqs from "../components/Faqs";
+import Testimonials from "../components/Testimonials";
 
 const HomePage = () => {
   let sliderOptions = {
@@ -169,14 +176,11 @@ const HomePage = () => {
       </div>
 
       <About />
-      {/* <Swiper>
-        <SwiperSlide>
-          <img src="img/carousel-1.jpg" height={"1000px"} alt="" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="img/carousel-2.jpg" height={"1000px"} alt="" />
-        </SwiperSlide>
-      </Swiper> */}
+      <Products />
+      <Features />
+      <ProductsSlider />
+      <Faqs />
+      <Testimonials />
     </>
   );
 };
