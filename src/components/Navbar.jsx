@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
@@ -8,21 +9,33 @@ const Navbar = () => {
         <div className="row gx-0 align-items-center">
           <div className="col-lg-8 text-center text-lg-start mb-2 mb-lg-0">
             <div className="d-flex flex-wrap">
-              <a href="#" className="text-muted small me-4">
-                <i className="fas fa-map-marker-alt text-primary me-2"></i>Find
-                A Location
-              </a>
-              <a href="tel:+01234567890" className="text-muted small me-4">
+              <Link
+                to={import.meta.env.VITE_APP_SITE_MAP}
+                target="_blank"
+                rel="noreferrer"
+                className="text-muted small me-4"
+              >
+                <i className="fas fa-map-marker-alt text-primary me-2"></i>
+                Location
+              </Link>
+              <Link
+                to={`tel: ${import.meta.env.VITE_APP_PHONE_NUMBER}`}
+                rel="noreferrer"
+                target="_blank"
+                className="text-muted small me-4"
+              >
                 <i className="fas fa-phone-alt text-primary me-2"></i>
                 +01234567890
-              </a>
-              <a
-                href="mailto:example@gmail.com"
+              </Link>
+              <Link
+                to={`mailto:${import.meta.env.VITE_APP_EMAIL}`}
+                target="_blank"
+                rel="noreferrer"
                 className="text-muted small me-0"
               >
                 <i className="fas fa-envelope text-primary me-2"></i>
                 Example@gmail.com
-              </a>
+              </Link>
             </div>
           </div>
           <div className="col-lg-4 text-center text-lg-end">
@@ -77,7 +90,9 @@ const Navbar = () => {
         <nav className="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
           <a href="" className="navbar-brand p-0">
             <h1 className="text-primary">
-              <i className="fas fa-shopping-bag me-3"></i>{import.meta.env.VITE_APP_SITE_NAME}</h1>
+              <i className="fas fa-shopping-bag me-3"></i>
+              {import.meta.env.VITE_APP_SITE_NAME}
+            </h1>
             {/* <img src="img/logo.png" alt="Logo"/>  */}
           </a>
           <button
@@ -139,7 +154,6 @@ const Navbar = () => {
             </a>
           </div>
         </nav>
-
       </div>
     </>
   );
