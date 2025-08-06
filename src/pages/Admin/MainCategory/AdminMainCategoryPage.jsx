@@ -1,19 +1,18 @@
 import React from "react";
 import BreadCrum from "../../components/BreadCrum";
 import AdminSideBar from "../../components/AdminSideBar";
-import Profile from "../../components/Profile";
 
-const AdminHomePage = () => {
+const AdminMainCategoryPage = () => {
   return (
     <>
-      <BreadCrum title="Admin Dashboard" />
+      <BreadCrum title="Admin Main Category" />
       <div className="container-fluid my-3">
         <div className="row">
           <div className="col-md-3 mb-3">
             <AdminSideBar />
           </div>
           <div className="col-md-9 mb-3">
-            <Profile title="Admin" />
+            
           </div>
         </div>
       </div>
@@ -21,4 +20,4 @@ const AdminHomePage = () => {
   );
 };
 
-export default AdminHomePage;
+export default AdminMainCategoryPage;

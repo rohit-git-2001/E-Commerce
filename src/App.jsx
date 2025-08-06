@@ -9,6 +9,7 @@ import FeaturesPage from "./pages/FeaturesPage";
 import ContactusPage from "./pages/ContactusPage";
 import ErrorPage from "./pages/ErrorPage";
 import AdminHomePage from "./pages/Admin/AdminHomePage";
+import AdminMainCategoryPage from "./pages/Admin/MainCategory/AdminMainCategoryPage";
 
 const App = () => {
   return (
@@ -22,7 +23,10 @@ const App = () => {
           <Route path="/features" element={<FeaturesPage />} />
           <Route path="/faqs" element={<FaqsPage />} />
           <Route path="/contactus" element={<ContactusPage />} />
-          <Route path="/admin" element={<AdminHomePage />} />"
+
+          {/* Admin Routes */}
+          <Route path="/admin" element={<AdminHomePage />} />
+          <Route path="/admin/maincategory" element={<AdminMainCategoryPage />} />
           <Route path="/*" element={<ErrorPage />} />"
         </Routes>
         <Footer />

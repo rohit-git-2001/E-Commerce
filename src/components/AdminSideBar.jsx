@@ -14,7 +14,7 @@ const AdminSideBar = () => {
           <span className="float-end">Home</span>
         </Link>
         <Link
-          to="/admin"
+          to="/admin/maincategory"
           className="list-group-item list-group-item-action active rounded-0 mb-1"
           aria-current="true"
         >
