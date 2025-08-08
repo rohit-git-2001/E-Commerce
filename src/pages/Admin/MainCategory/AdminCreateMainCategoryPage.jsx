@@ -21,7 +21,10 @@ const AdminCreateMainCategoryPage = () => {
 
   function getInputData(e) {
     let name = e.target.name;
-    let value = e.target.value;
+    let value =
+      name === "pic"
+        ? "maincategory/" + e.target.files[0].name
+        : e.target.value;
 
     setErrorMessage((oldValue) => {
       return {
