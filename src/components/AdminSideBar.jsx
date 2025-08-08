@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const AdminSideBar = () => {
   return (
     <>
-      <div class="list-group">
+      <div className="list-group">
         <Link
           to="/admin"
           className="list-group-item list-group-item-action active rounded-0 mb-1"
@@ -22,7 +22,7 @@ const AdminSideBar = () => {
           <span className="float-end">Main Category</span>
         </Link>
         <Link
-          to="/admin"
+          to="/admin/subcategory"
           className="list-group-item list-group-item-action active rounded-0 mb-1"
           aria-current="true"
         >
@@ -30,7 +30,7 @@ const AdminSideBar = () => {
           <span className="float-end">Sub Category</span>
         </Link>
         <Link
-          to="/admin"
+          to="/admin/brand"
           className="list-group-item list-group-item-action active rounded-0 mb-1"
           aria-current="true"
         >
@@ -38,7 +38,7 @@ const AdminSideBar = () => {
           <span className="float-end">Brand</span>
         </Link>
         <Link
-          to="/admin"
+          to="/admin/product"
           className="list-group-item list-group-item-action active rounded-0 mb-1"
           aria-current="true"
         >
@@ -46,7 +46,7 @@ const AdminSideBar = () => {
           <span className="float-end">Product</span>
         </Link>
         <Link
-          to="/admin"
+          to="/admin/testimonial"
           className="list-group-item list-group-item-action active rounded-0 mb-1"
           aria-current="true"
         >
@@ -54,7 +54,7 @@ const AdminSideBar = () => {
           <span className="float-end">Testimonial</span>
         </Link>
         <Link
-          to="/admin"
+          to="/admin/features"
           className="list-group-item list-group-item-action active rounded-0 mb-1"
           aria-current="true"
         >
@@ -62,7 +62,7 @@ const AdminSideBar = () => {
           <span className="float-end">Features</span>
         </Link>
         <Link
-          to="/admin"
+          to="/admin/faqs"
           className="list-group-item list-group-item-action active rounded-0 mb-1"
           aria-current="true"
         >
@@ -70,7 +70,7 @@ const AdminSideBar = () => {
           <span className="float-end">FAQs</span>
         </Link>
         <Link
-          to="/admin"
+          to="/admin/newsletter"
           className="list-group-item list-group-item-action active rounded-0 mb-1"
           aria-current="true"
         >
@@ -78,7 +78,7 @@ const AdminSideBar = () => {
           <span className="float-end">News Letter</span>
         </Link>
         <Link
-          to="/admin"
+          to="/admin/contactus"
           className="list-group-item list-group-item-action active rounded-0 mb-1"
           aria-current="true"
         >
@@ -86,7 +86,7 @@ const AdminSideBar = () => {
           <span className="float-end">Contact Us</span>
         </Link>
         <Link
-          to="/admin"
+          to="/admin/checkout"
           className="list-group-item list-group-item-action active rounded-0 mb-1"
           aria-current="true"
         >
@@ -94,7 +94,7 @@ const AdminSideBar = () => {
           <span className="float-end">Checkout</span>
         </Link>
         <Link
-          to="/admin"
+          to="/admin/user"
           className="list-group-item list-group-item-action active rounded-0 mb-1"
           aria-current="true"
         >

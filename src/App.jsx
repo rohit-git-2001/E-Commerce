@@ -10,6 +10,7 @@ import ContactusPage from "./pages/ContactusPage";
 import ErrorPage from "./pages/ErrorPage";
 import AdminHomePage from "./pages/Admin/AdminHomePage";
 import AdminMainCategoryPage from "./pages/Admin/MainCategory/AdminMainCategoryPage";
+import AdminCreateMainCategoryPage from "./pages/Admin/MainCategory/AdminCreateMainCategoryPage";
 
 const App = () => {
   return (
@@ -27,6 +28,7 @@ const App = () => {
           {/* Admin Routes */}
           <Route path="/admin" element={<AdminHomePage />} />
           <Route path="/admin/maincategory" element={<AdminMainCategoryPage />} />
+          <Route path="/admin/maincategory/create" element={<AdminCreateMainCategoryPage />} />
           <Route path="/*" element={<ErrorPage />} />"
         </Routes>
         <Footer />
